@@ -1,0 +1,2 @@
+class DataConfigureController < ApplicationController
+end
