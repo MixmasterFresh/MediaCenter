@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class DataConfigureControllerTest < ActionController::TestCase
+class DiskReaderControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end
