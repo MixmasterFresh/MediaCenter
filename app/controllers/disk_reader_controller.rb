@@ -1,2 +1,0 @@
-class DiskReaderController < ApplicationController
-end
