@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <!--selecting computer to play on, link to song list, link to add songs-->
-
 <html>
+<head>
+  <link rel="stylesheet" type="text/css" href="application.css" />
+  <script type="text/javascript" src="application.js"></script>
+</head>
+
 <body>
-<title>Media Center</title>
-<h1>Media Center</h1>
+<h1>Media Center</h1><br>
 
-<h3>Select a computer to play from</h3>
-<input type="text" name="computername" placeholder="Computer Name">
-<input type="submit" value="Select">
-<!--when setting up playing computer, give name-->
-<!--selecting computer name give (input box)-->
+<a href="../../views/player/player.erb"><h2>Play from this device</h2></a>
 
+<a href="#" onclick="unhide('select');"><h2>Control from this device</h2></a>
+<div id="select" class="hidden">
+    <select id="list">
+      <!--list populated by information returned-->
+      <option value="val">comp name</option>
+    </select>
+    <input type="submit" value="Select">
+</div>
 
-<a href="mission_control"><h3>Songs</h3></a>
-
-<a href="reader"><h3>Add Songs</h3></a>
+<a href="../../views/upload/reader.erb"><h2>Upload Songs</h2></a>
 
 </body>
 </html>

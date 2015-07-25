@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+function unhide(divID) {
+    var item = document.getElementById(divID);
+    if (item) {
+        item.className=(item.className=='hidden')?'unhidden':'hidden';
+    }
+}
