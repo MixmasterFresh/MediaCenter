@@ -5,28 +5,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  namespace :player do
-    get '/', to: 'player#view', as: :play
-  end
-
-  namespace :control do
-    get '/', to: 'control_panel#view', as: :control
-  end
-
-  namespace :control_player do
-    get '/', to: 'control_player#view', as: :control_play
-  end
-
-  namespace :media do
-    get '/' => 'media_reader#view', as: :media
-  end
-
-  namespace :reload do
-    get '/', to: 'reload_data#view', as: :reload
-    get '/full', to: 'reload_data#load_from_media_files'
-    get '/light', to: 'reload_data#load_from_backup_file'
-  end
-
 
 
 
