@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
 
+  get '/control', to:'mission_control#index'
+  get '/player', to:'player#index'
+  get '/reader', to:'reader#index'
 
 
   # Example of regular route:

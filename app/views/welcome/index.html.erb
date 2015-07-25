@@ -9,7 +9,7 @@
 <body>
 <h1>Media Center</h1><br>
 
-<a href="../../views/player/player.erb"><h2>Play from this device</h2></a>
+<a href="/player"><h2>Play from this device</h2></a>
 
 <a href="#" onclick="unhide('select');"><h2>Control from this device</h2></a>
 <div id="select" class="hidden">
@@ -17,10 +17,12 @@
       <!--list populated by information returned-->
       <option value="val">comp name</option>
     </select>
-    <input type="submit" value="Select">
+    <form action="/control">
+      <input type="submit" value="Select">
+    </form>
 </div>
 
-<a href="../../views/upload/reader.erb"><h2>Upload Songs</h2></a>
+<a href="/reader"><h2>Upload Songs</h2></a>
 
 </body>
 </html>
