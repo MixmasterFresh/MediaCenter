@@ -22,3 +22,11 @@ function unhide(divID) {
         item.className=(item.className=='hidden')?'unhidden':'hidden';
     }
 }
+
+function testPlay() {
+    new Howl(
+        {
+            urls: ["app/assets/audio/Prelude1221.mp3"]
+        }
+    ).play();
+}
