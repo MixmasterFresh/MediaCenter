@@ -19,11 +19,3 @@
 function unhide(divID) {
     $(document.getElementById(divID)).toggle();
 }
-
-function testPlay() {
-    new Howl(
-        {
-            urls: ["app/assets/audio/Prelude1221.mp3"]
-        }
-    ).play();
-}
