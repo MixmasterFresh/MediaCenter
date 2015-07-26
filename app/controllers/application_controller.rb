@@ -3,19 +3,6 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  def stream_connection
-    @@stream_connection
-  end
-
-  def stream_connection_add(connection)
-    @@stream_connection = connection
-  end
-
-  def notify_player
-    # stream_connection.headers['Content-Type'] = 'text/event-stream'
-    stream_connection.stream.write "event: refresh\n\n"
-  end
-
   def next_songs=(song_id)
     @@next_songs ||= []
     @@next_songs << song_id

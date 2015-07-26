@@ -7,7 +7,6 @@ class MissionControlController < ApplicationController
 
   def play_song
     next_song = params[:id]
-    notify_player
     redirect_to :back
   end
 
