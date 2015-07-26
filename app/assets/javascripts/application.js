@@ -15,7 +15,13 @@
 //= require turbolinks
 //= require_tree .
 
-
 function unhide(divID) {
     $(document.getElementById(divID)).toggle();
+}
+
+function testPlay() {
+    var music = new Howl({
+        urls: ['audio/Prelude1221.mp3']
+    });
+    music.play();
 }
