@@ -346,7 +346,7 @@
         newNode.preload = 'auto';
         newNode.volume = (Howler._muted) ? 0 : self._volume * Howler.volume();
 
-        // setup the event listener to start playing the sound
+        // setup the event listener to start player the sound
         // as soon as it has buffered enough
         var listener = function() {
           // round up the duration when using HTML5 Audio to account for the lower precision
@@ -435,7 +435,7 @@
         // persist the sprite being played
         node._sprite = sprite;
 
-        // determine where to start playing from
+        // determine where to start player from
         var pos = (node._pos > 0) ? node._pos : self._sprite[sprite][0] / 1000;
 
         // determine how long to play for
@@ -860,7 +860,7 @@
     },
 
     /**
-     * Fade a currently playing sound between two volumes.
+     * Fade a currently player sound between two volumes.
      * @param  {Number}   from     The volume to fade from (0.0 to 1.0).
      * @param  {Number}   to       The volume to fade to (0.0 to 1.0).
      * @param  {Number}   len      Time in milliseconds to fade.
@@ -962,7 +962,7 @@
       var self = this,
         node = null;
 
-      // find the first playing node
+      // find the first player node
       for (var i=0; i<self._audioNode.length; i++) {
         if (!self._audioNode[i].paused) {
           node = self._audioNode[i];
@@ -1161,10 +1161,10 @@
     unload: function() {
       var self = this;
 
-      // stop playing any active nodes
+      // stop player any active nodes
       var nodes = self._audioNode;
       for (var i=0; i<self._audioNode.length; i++) {
-        // stop the sound if it is currently playing
+        // stop the sound if it is currently player
         if (!nodes[i].paused) {
           self.stop(nodes[i].id);
           self.on('end', nodes[i].id);
