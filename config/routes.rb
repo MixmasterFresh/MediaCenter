@@ -10,8 +10,7 @@ Rails.application.routes.draw do
 
 
   get '/control', to:'mission_control#index'
-  post
-  get '/player', to:'player#play'
+  get '/player', to:'player#index'
 
 
 

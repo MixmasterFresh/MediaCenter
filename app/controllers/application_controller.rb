@@ -16,16 +16,19 @@ class ApplicationController < ActionController::Base
     stream_connection.stream.write "event: refresh\n\n"
   end
 
-  def next_song
-    song_id = @@next_song[0]
-    @@next_song.delete_at(0)
-    Song.where(id: song_id)
-  end
-
   def next_songs=(song_id)
     @@next_songs ||= []
     @@next_songs << song_id
   end
+
+  def next_song
+    @@next_songs ||= []
+    return nil if @@next_songs.empty?
+    song_id = @@next_songs[0]
+    @@next_songs.delete_at(0)
+    Song.where(id: song_id)
+  end
+
 
   def next_song=(song_id)
     @@next_songs ||= []
