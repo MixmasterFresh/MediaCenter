@@ -14,14 +14,43 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+var music = null;
 
-function unhide(divID) {
-    $(document.getElementById(divID)).toggle();
-}
-
-function testPlay() {
-    var music = new Howl({
-        urls: ['audio/Prelude1221.mp3']
+function testPlay(value){
+    music = new Howl({
+        urls: [value]
     });
-    music.play();
+    music.play();}
+
+function restart(){
+    if (music)
+        if (music.paused) {
+            music.play();
+            music.paused = false;}}
+
+function pause(){
+    if (music)
+        if (!music.paused) {
+            music.pause();
+            music.paused = true;}}
+
+function stop(){
+    music.stop();
+    music = null;}
+
+function back(){
+
 }
+
+function next(){
+
+}
+
+jQuery(document).ready(function() {
+    setTimeout(function() {
+        var source = new EventSource('/browser');
+        source.addEventListener('refresh', function(e) {
+            window.location.reload();
+        });
+    }, 1);
+});

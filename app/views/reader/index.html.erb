@@ -2,23 +2,40 @@
 <!--selecting computer to play on, link to song list, link to add songs-->
 <html>
 <head>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="application.css" />
   <script type="text/javascript" src="application.js"></script>
 </head>
 
+<style>
+  form{
+      alignment: center;
+  }
+  input#song_file{
+      display:inline-block;
+      position: relative;
+  }
+</style>
+
 <body>
 
-<h1>Pick a song file to upload</h1><br>
+<h1>Upload a Song</h1><br><br>
 
-<%= form_for @song, url: upload_song_path, multipart: true do |f| %>
-    <%= f.text_field :title, class:"title" %>
-    <%= f.file_field :file, class:"file" %>
-    <%= f.submit%>
-<% end %>
+<form accept-charset="UTF-8" action="/reader/upload_song" class="new_song" enctype="multipart/form-data" id="new_song" method="post">
+  <div style="display:none">
+    <input name="utf8" type="hidden" value="?">
+    <input name="authenticity_token" type="hidden" value="LLbUPGHlHfVptMl0b0pX7UU8Apk1nAk+7amqjlqTV/s=">
+  </div>
+  <h4>Enter a file name:</h4>
+  <input id="song_title" name="song[title]" type="text"><br><br>
+  <h4>Select a file</h4>
+  <input id="song_file" name="song[file]" type="file" align="center"><br><br><br>
+  <button type="submit" class="btn btn-lg btn-link" name="commit" value="Create Song"><h4>Create Song</h4></button>
+</form>
 
 <br><br>
+<button type="submit" class="btn btn-lg btn-link" onclick="window.location='/home';"><h4>Return to Home Screen</h4></button>
 
-<button type="submit" class="btn btn-lg btn-link" onclick="window.location='/home';"><h3>Return to Home Screen</h3></button>
 
 </body>
 

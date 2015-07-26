@@ -2,6 +2,7 @@
 <!--selecting computer to play on, link to song list, link to add songs-->
 <html>
 <head>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="application.css" />
   <script type="text/javascript" src="application.js"></script>
 </head>
@@ -9,23 +10,13 @@
 <body>
 <h1>Media Center</h1><br>
 
-<button type="submit" class="btn btn-lg btn-link" onclick="window.location='/player';"><h2>Play from this device</h2></button>
+<button type="submit" class="btn btn-lg btn-link" onclick="window.location='/player';"><h4>Play from this device</h4></button>
 <br><br><br>
 
-<button type="button" class="btn btn-lg btn-link" onclick="unhide('select');"><h2>Control from this device</h2></button>
-<br><br>
-<div id="select" class="hidden">
-    <form action="/control">
-      <select id="list">
-        <!--list populated by information returned-->
-        <option value="val">comp name</option>
-      </select>
-      <input type="submit" value="Select">
-    </form><br><br>
-</div>
-<br>
+<button type="submit" class="btn btn-lg btn-link" onclick="window.location='/control';"><h4>Control from this device</h4></button>
+<br><br><br>
 
-<button type="submit" class="btn btn-lg btn-link" onclick="window.location='/reader';"><h2>Upload Songs</h2></button>
+<button type="submit" class="btn btn-lg btn-link" onclick="window.location='/reader';"><h4>Upload Songs</h4></button>
 
 </body>
 </html>

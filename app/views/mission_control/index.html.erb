@@ -2,9 +2,12 @@
 <!--selecting computer to play on, link to song list, link to add songs-->
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="application.css" />
+  <link rel="import" href="audioPlayer.html.erb" />
   <script type="text/javascript" src="application.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
 <style>
@@ -13,54 +16,63 @@
         height:40px;
         width:40px;
     }
+    glyph {
+        color: white;
+    }
 </style>
 
 <h1>mission control</h1>
 
-<h3>player</h3>
+<h3>Now Playing:</h3><br>
 
-<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="window.location='/reader';">
-  <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="back();">
+  <span id="glyph" class="glyphicon glyphicon-step-backward"></span>
 </button>
-<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="window.location='/reader';">
-  <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="restart();">
+  <span class="glyphicon glyphicon-play"></span>
 </button>
-<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="window.location='/reader';">
-  <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="pause();">
+  <span class="glyphicon glyphicon-pause"></span>
 </button>
-<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="window.location='/reader';">
-  <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="stop();">
+  <span class="glyphicon glyphicon-stop"></span>
 </button>
-<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="window.location='/reader';">
-  <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="next();">
+  <span class="glyphicon glyphicon-step-forward"></span>
 </button>
 
 
 <br><br><br>
-
 <table id="t01" align="center">
   <tr>
     <th>Title</th>
     <th>Artist</th>
     <th>Album</th>
+    <th>Year</th>
   </tr>
   <tr>
-    <td>Song1</td>
+    <td>audio/Prelude1221.mp3</td>
     <td>Artist1</td>
     <td>Album1</td>
+    <th>Year1</th>
   </tr>
   <tr>
-    <td>Song2</td>
+    <td>audio/Radioactive.mp3</td>
     <td>Artist2</td>
     <td>Album2</td>
-  </tr>
-  <tr>
-    <td>Song3</td>
-    <td>Artist3</td>
-    <td>Album3</td>
+    <th>Year2</th>
   </tr>
 </table><br><br>
 
-<button type="submit" class="btn btn-lg btn-link" onclick="window.location='/home';"><h3>Return to Home Screen</h3></button>
+
+<script type="text/javascript">
+    $('#t01 tr').click(function(){
+        $(this).addClass('selected').siblings().removeClass('selected');
+        var value = $(this).find('td:first').html();
+        testPlay(value);
+    });
+</script>
+
+<button type="submit" class="btn btn-lg btn-link" onclick="window.location='/home';"><h4>Return to Home Screen</h4></button>
 
 </html>

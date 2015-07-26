@@ -15,58 +15,60 @@
  */
 
 body {
-    background: #2E2F30;
-    position: relative;
-    text-align: center;
-    color: #00A876;
+    background: #2E2F30 !important;
+    position: relative !important;
+    text-align: center !important;
+    color: #00A876 !important;
 }
 h1 {
-    color: #00A876;
-    font-size: 50px;
+    color: #00A876 !important;
+    font-size: 50px !important;
 }
 
 a:link {
-    color: #FFA100;
+    color: #FFA100 !important;
 }
 
 button {
-    background: #FFA100;
-    border-color: #2E2F30;
-    color: #2E2F30;
-    padding-right: 5px;
-    padding-left: 5px;
+    background: #FFA100 !important;
+    border-color: #2E2F30 !important;
+    color: #2E2F30 !important;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
 }
 
 input {
-    font-size: large;
-    background: #FFA100;
-    border-color: #2E2F30;
-    color: #2E2F30;
+    font-size: large !important;
+    background: #FFA100 !important;
+    border-color: #2E2F30 !important;
+    color: #2E2F30 !important;
 }
 
 select {
-    font-size: large;
-    background: #FFA100;
-    border-color: #2E2F30;
-    color: #2E2F30;
+    font-size: large !important;
+    background: #FFA100 !important;
+    border-color: #2E2F30 !important;
+    color: #2E2F30 !important;
+    height: 35px;
 }
 
 table {
-    width: 75%;
-
+    width: 75% !important;
+    font-size: large !important;
+    text-align: left !important;
 }
 
 table#t01 tr:nth-child(even) {
-    background-color: #2E2F30;
+    background-color: #2E2F30 !important;
 }
 table#t01 tr:nth-child(odd) {
-    background-color: #454648;
+    background-color: #454648 !important;
 }
 
 .hidden{
- display:none;
+ display:none !important;
 }
 
 .unhidden{
-    display:block;
+    display:block !important;
 }
