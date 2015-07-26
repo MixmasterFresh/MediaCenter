@@ -6,6 +6,20 @@
   <script type="text/javascript" src="application.js"></script>
 </head>
 
-<h1>upload</h1>
+<body>
+
+<h1>Pick a song file to upload</h1><br>
+
+<%= form_for @song, url: upload_song_path, multipart: true do |f| %>
+    <%= f.text_field :title, class:"title" %>
+    <%= f.file_field :file, class:"file" %>
+    <%= f.submit%>
+<% end %>
+
+<br><br>
+
+<button type="submit" class="btn btn-lg btn-link" onclick="window.location='/home';"><h3>Return to Home Screen</h3></button>
+
+</body>
 
 </html>

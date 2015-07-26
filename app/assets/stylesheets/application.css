@@ -15,22 +15,57 @@
  */
 
 body {
-    background: #DBE9FE;
+    background: #2E2F30;
     position: relative;
     text-align: center;
-    color: #0F4DA8;
+    color: #00A876;
 }
 h1 {
-    color: #3515B0;
+    color: #00A876;
+    font-size: 50px;
 }
 
 a:link {
-    color: #0F4DA8;
+    color: #FFA100;
 }
 
- .hidden{
-     display:none;
- }
+button {
+    background: #FFA100;
+    border-color: #2E2F30;
+    color: #2E2F30;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+input {
+    font-size: large;
+    background: #FFA100;
+    border-color: #2E2F30;
+    color: #2E2F30;
+}
+
+select {
+    font-size: large;
+    background: #FFA100;
+    border-color: #2E2F30;
+    color: #2E2F30;
+}
+
+table {
+    width: 75%;
+
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #2E2F30;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #454648;
+}
+
+.hidden{
+ display:none;
+}
 
 .unhidden{
     display:block;
