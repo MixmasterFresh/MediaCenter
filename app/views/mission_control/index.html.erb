@@ -2,10 +2,65 @@
 <!--selecting computer to play on, link to song list, link to add songs-->
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="application.css" />
   <script type="text/javascript" src="application.js"></script>
 </head>
 
+<style>
+    button#mybutton {
+        font-size: 18px;
+        height:40px;
+        width:40px;
+    }
+</style>
+
 <h1>mission control</h1>
+
+<h3>player</h3>
+
+<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="window.location='/reader';">
+  <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+</button>
+<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="window.location='/reader';">
+  <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+</button>
+<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="window.location='/reader';">
+  <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+</button>
+<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="window.location='/reader';">
+  <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+</button>
+<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="window.location='/reader';">
+  <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+</button>
+
+
+<br><br><br>
+
+<table id="t01" align="center">
+  <tr>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Album</th>
+  </tr>
+  <tr>
+    <td>Song1</td>
+    <td>Artist1</td>
+    <td>Album1</td>
+  </tr>
+  <tr>
+    <td>Song2</td>
+    <td>Artist2</td>
+    <td>Album2</td>
+  </tr>
+  <tr>
+    <td>Song3</td>
+    <td>Artist3</td>
+    <td>Album3</td>
+  </tr>
+</table><br><br>
+
+<button type="submit" class="btn btn-lg btn-link" onclick="window.location='/home';"><h3>Return to Home Screen</h3></button>
 
 </html>

@@ -9,21 +9,23 @@
 <body>
 <h1>Media Center</h1><br>
 
-<a href="/player"><h2>Play from this device</h2></a>
+<button type="submit" class="btn btn-lg btn-link" onclick="window.location='/player';"><h2>Play from this device</h2></button>
+<br><br><br>
 
-<a href="#" onclick="unhide('select');"><h2>Control from this device</h2></a>
+<button type="button" class="btn btn-lg btn-link" onclick="unhide('select');"><h2>Control from this device</h2></button>
+<br><br>
 <div id="select" class="hidden">
-    <select id="list">
-      <!--list populated by information returned-->
-      <option value="val">comp name</option>
-    </select>
     <form action="/control">
+      <select id="list">
+        <!--list populated by information returned-->
+        <option value="val">comp name</option>
+      </select>
       <input type="submit" value="Select">
-    </form>
+    </form><br><br>
 </div>
+<br>
 
-<a href="/reader"><h2>Upload Songs</h2></a>
-<p>Hi</p>
+<button type="submit" class="btn btn-lg btn-link" onclick="window.location='/reader';"><h2>Upload Songs</h2></button>
 
 </body>
 </html>
