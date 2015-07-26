@@ -2,10 +2,10 @@ module MultiTenant
   extend ActiveSupport::Concern
 
   included do
-    helper_method :current_pairing
+    helper_method :available_pairs
   end
 
-  def current_pairing(pair_name)
-    @@current_pairing ||= {}
+  def available_pairs(pair_name)
+    Player.all
   end
 end
