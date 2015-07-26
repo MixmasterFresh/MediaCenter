@@ -6,7 +6,11 @@ class ReaderController < ApplicationController
 
   def upload_song
     @song = Song.create(song_params)
-    redirect_to root_path
+    if @song.valid?
+      redirect_to root_path
+    else
+      redirect_to :back
+    end
   end
 
   private
