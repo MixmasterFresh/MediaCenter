@@ -14,35 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-var music = null;
 
-function testPlay(value){
-    music = new Howl({
-        urls: [value]
-    });
-    music.play();}
-
-function restart(){
-    if (music)
-        if (music.paused) {
-            music.play();
-            music.paused = false;}}
-
-function pause(){
-    if (music)
-        if (!music.paused) {
-            music.pause();
-            music.paused = true;}}
-
-function stop(){
-    music.stop();
-    music = null;}
-
-function back(){
-
-}
-
-function next(){
-
-}
 

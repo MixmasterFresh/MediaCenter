@@ -14,6 +14,22 @@
     var myAud = new Howl({urls: ["<%= @url %>"]});
     myAud.play();
 
+    function restart(){
+        if (myAud)
+            if (myAud.paused) {
+                myAud.play();
+                myAud.paused = false;}}
+
+    function pause(){
+        if (myAud)
+            if (!myAud.paused) {
+                myAud.pause();
+                myAud.paused = true;}}
+
+    function stop(){
+        myAud.stop();
+        myAud = null;}
+
 </script>
 </html>
 

@@ -20,25 +20,21 @@
     }
 </style>
 
-<h1>mission control</h1>
+<h1>Song Control</h1>
 
-<h3>Now Playing:</h3><br>
 
-<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="back();">
-  <span id="glyph" class="glyphicon glyphicon-step-backward"></span>
-</button>
-<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="restart();">
-  <span class="glyphicon glyphicon-play"></span>
-</button>
-<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="pause();">
-  <span class="glyphicon glyphicon-pause"></span>
-</button>
-<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="stop();">
-  <span class="glyphicon glyphicon-stop"></span>
-</button>
-<button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="next();">
-  <span class="glyphicon glyphicon-step-forward"></span>
-</button>
+<div class="hidden">
+  <h3>Now Playing:</h3><br>
+  <button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="restart();">
+    <span class="glyphicon glyphicon-play"></span>
+  </button>
+  <button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="pause();">
+    <span class="glyphicon glyphicon-pause"></span>
+  </button>
+  <button id="mybutton" type="submit" class="btn btn-lg btn-link" onclick="stop();">
+    <span class="glyphicon glyphicon-stop"></span>
+  </button>
+</div>
 
 
 <br><br><br>
@@ -56,15 +52,6 @@
     </tr>
   <% end %>
 </table><br><br>
-
-
-<!--<script type="text/javascript">
-    $('#t01 tr').click(function(){
-        $(this).addClass('selected').siblings().removeClass('selected');
-        var value = $(this).find('td:first').html();
-        testPlay(value);
-    });
-</script>-->
 
 <button type="submit" class="btn btn-lg btn-link" onclick="window.location='/';"><h4>Return to Home Screen</h4></button>
 
