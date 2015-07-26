@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  def next_songs=(song_id)
+  def next_songs_add(song_id)
     @@next_songs ||= []
     @@next_songs << song_id
   end
@@ -12,12 +12,12 @@ class ApplicationController < ActionController::Base
     @@next_songs ||= []
     return nil if @@next_songs.empty?
     song_id = @@next_songs[0]
-    @@next_songs.delete_at(0)
-    Song.where(id: song_id)
+
+    Song.where(id: song_id).first
   end
 
 
-  def next_song=(song_id)
+  def next_song_add(song_id)
     @@next_songs ||= []
     @@next_songs.insert(0, song_id)
   end

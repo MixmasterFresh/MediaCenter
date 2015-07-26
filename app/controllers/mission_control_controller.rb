@@ -6,12 +6,12 @@ class MissionControlController < ApplicationController
 
 
   def play_song
-    next_song = params[:id]
+    next_song_add params[:id]
     redirect_to :back
   end
 
   def queue_song
-    next_songs = params[:id]
+    next_songs_add params[:id]
     redirect_to :back
   end
 end
