@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     @@stream_connection
   end
 
-  def stream_connection=(connection)
+  def stream_connection_add(connection)
     @@stream_connection = connection
   end
 

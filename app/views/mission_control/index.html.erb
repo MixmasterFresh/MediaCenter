@@ -51,8 +51,8 @@
   <% @songs.each do |song| %>
     <tr>
       <td><%= song.title %></td>
-      <td><%= link_to 'Add To Queue', queue_song_path(song) %></td>
-      <td><%= link_to 'Play Now', play_song_path(song) %></td>
+      <td><%= link_to 'Add To Queue', queue_song_path(song), method: :post %></td>
+      <td><%= link_to 'Play Now', play_song_path(song), method: :post %></td>
     </tr>
   <% end %>
 </table><br><br>
