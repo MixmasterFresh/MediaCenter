@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
 
   get '/control', to:'mission_control#index'
+  post '/control/play/:id', to:'mission_control#play_song', as: 'play_song'
+  post '/control/play/:id', to:'mission_control#queue_song', as: 'queue_song'
+
+
   get '/player', to:'player#index'
 
 
