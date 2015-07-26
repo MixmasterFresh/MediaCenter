@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def notify_player
-    stream_connection.headers['Content-Type'] = 'text/event-stream'
+    # stream_connection.headers['Content-Type'] = 'text/event-stream'
     stream_connection.stream.write "event: refresh\n\n"
   end
 
