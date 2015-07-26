@@ -1,0 +1,5 @@
+<%= form_for @song, url: upload_song_path, multipart: true do |f| %>
+  <%= f.text_field :title %>
+  <%= f.file_field :file %>
+  <%= f.submit %>
+<% end %>
