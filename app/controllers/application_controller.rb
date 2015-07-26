@@ -11,11 +11,24 @@ class ApplicationController < ActionController::Base
     @@stream_connection = connection
   end
 
-  def next_song
-    @@next_song
+  def notify_player
+    stream_connection.headers['Content-Type'] = 'text/event-stream'
+    stream_connection.stream.write "event: refresh\n\n"
   end
 
-  def next_song=(song)
-    @@next_song = song
+  def next_song
+    song_id = @@next_song[0]
+    @@next_song.delete_at(0)
+    Song.where(id: song_id)
+  end
+
+  def next_songs=(song_id)
+    @@next_songs ||= []
+    @@next_songs << song_id
+  end
+
+  def next_song=(song_id)
+    @@next_songs ||= []
+    @@next_songs.insert(0, song_id)
   end
 end

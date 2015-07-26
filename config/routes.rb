@@ -9,10 +9,9 @@ Rails.application.routes.draw do
   post 'reader/upload_song', to: 'reader#upload_song', as: 'upload_song'
 
 
-  get '/home', to:'welcome#index'
   get '/control', to:'mission_control#index'
-  get '/player', to:'player#index'
-  get '/reader', to:'reader#index'
+  post
+  get '/player', to:'player#play'
 
 
 

@@ -5,4 +5,5 @@ class Song < ActiveRecord::Base
             attachment_content_type: { content_type: /\Aaudio\/.*\Z/ },
             attachment_presence: true
   has_attached_file :file
+  has_many :playlists, through: :playlist_memberships
 end

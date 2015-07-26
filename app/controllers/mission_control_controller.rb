@@ -4,7 +4,13 @@ class MissionControlController < ApplicationController
   end
 
   def play_song
-    @song = Song.where(id: params[:id])
-    @url = @song.file.url
+    next_song = params[:id]
+    notify_player
+    redirect_to :back
+  end
+
+  def queue_song
+    next_songs = params[:id]
+    redirect_to :back
   end
 end
