@@ -10,5 +10,16 @@
 <h1>Connect another device to control from</h1><br>
 
 <button type="submit" class="btn btn-lg btn-link" onclick="window.location='/';"><h4>Return to Home Screen</h4></button>
-
+<script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            var source = new EventSource('/browser');
+            source.addEventListener('refresh', function() {
+                window.location.reload();
+                testPlay('<%= @url %>');
+            });
+        }, 1);
+    });
+</script>
 </html>
+
