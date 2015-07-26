@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-    get 'reader/', to: 'reader#index'
-    post 'reader/upload_song', to: 'reader#upload_song', as: 'upload_song'
+  get 'reader/', to: 'reader#index'
+  post 'reader/upload_song', to: 'reader#upload_song', as: 'upload_song'
 
 
   get '/home', to:'welcome#index'
